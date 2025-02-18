@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;;
 }
 
 body {
@@ -20,6 +21,9 @@ body {
     background-color: var(--primary-blue);
     color: var(--white);
     line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;;
+    max-width: 100%;;
 }
 
 /* Atualização global de todas as fontes */
@@ -299,7 +303,7 @@ header {
     margin: 0 auto;
 }
 
- // Start of Selection
+
 .content-left {
     color: #0F103C;
     font-family: Ubuntu;
@@ -308,8 +312,7 @@ header {
     font-weight: 500;
     line-height: normal;
 }
-    flex: 1;
-}
+
 
 .content-right {
     flex: 1;
@@ -405,7 +408,7 @@ header {
     font-size: 32px;
     width: 100%;
     font-weight: bold;
-    color: var(--dark-blue);
+    color: var (--dark-blue);
     margin-bottom: 30px;
     line-height: 1.2;
     
@@ -446,7 +449,7 @@ header {
 }
 
 /* Media Queries */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 100%) {
     .features {
         padding: 60px 40px;
     }
@@ -467,7 +470,7 @@ header {
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 100%) {
     .features .container {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -497,7 +500,7 @@ header {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 100%) {
     .features {
         padding: 40px 20px;
     }
@@ -516,20 +519,20 @@ header {
 
     .features .laptop-image {
         width: 100%;
-        max-width: 400px;
+        max-width: 100%;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 100%) {
     .features .content-left,
     .features .content-right,
     .features .content-right2 {
-        max-width: 400px;
+        max-width: 100%;
     }
 
     .features .laptop-image {
         width: 100%;
-        max-width: 400px;
+        max-width: 100%;
     }
 }
 
@@ -901,7 +904,7 @@ footer img {
 @media screen and (min-width: 1441px) and (max-width: 1920px) {
     .banner-info .container {
         max-width: 1720px;
-        padding: 0 calc(150px + (200 - 150) * ((100vw - 1440px) / (1920 - 1440)));
+        padding: 0 calc(150px + (200 - 150) * ((100%; - 1440px) / (1920 - 1440)));
     }
 
     .banner-info .left-column,
@@ -1188,7 +1191,7 @@ footer img {
 @media screen and (min-width: 1441px) and (max-width: 1920px) {
     .banner-info .container {
         max-width: 1920px;
-        padding: 0 calc(150px + (200 - 150) * ((100vw - 1440px) / (1920 - 1440)));
+        padding: 0 calc(150px + (200 - 150) * ((100%; - 1440px) / (1920 - 1440)));
     }
 }
 
@@ -1360,7 +1363,7 @@ footer img {
     align-items: flex-start;
     gap: 15px;
     margin-bottom: 25px;
-    color: var(--primary-blue);
+    color: var (--primary-blue);
 }
 
 .ambulatorial li span {
@@ -1745,7 +1748,7 @@ footer img {
 
     .statistics .stats-grid {
         grid-template-columns: 1fr;
-        max-width: 400px;
+        max-width: 100%;
     }
 
     .statistics h2 {
@@ -1951,9 +1954,7 @@ footer img {
             height: 644px;
         }
     }
-        width: 100%;
-        max-width: 100%;
-    }
+  
 
 
 /* Para celulares grandes (576px - 767px) */
@@ -2054,7 +2055,7 @@ img {
 @media screen and (max-width: 1200px) {
     .text-content {
         margin-left: 60px;
-        padding-left: 150px;
+        padding-left: 50px;
     }
 }
 
@@ -2100,7 +2101,7 @@ img {
 @media screen and (min-width: 1441px) and (max-width: 1920px) {
     .text-content {
         max-width: 1000px; /* Ainda maior para telas maiores */
-        padding-left: calc(250px + (300 - 250) * ((100vw - 1440px) / (1920 - 1440)));
+        padding-left: calc(250px + (300 - 250) * ((100%; - 1440px) / (1920 - 1440)));
     }
 
     .text-content h2 {
@@ -2190,4 +2191,262 @@ img {
     .efficiency .container {
         padding: 0 15px;
     }
+}
+
+/* Breakpoint for 1440px */
+@media screen and (max-width: 1440px) {
+  .form-section,
+  .brain-section,
+  .features,
+  .statistics,
+  .banner-info,
+  .ambulatorial,
+  .efficiency,
+  .site-footer,
+  .container,
+  .content-left,
+  .content-right,
+  .info-container,
+  .stats-grid,
+  .text-content {
+    width: 100%;;
+    max-width: 100%;;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .laptop-image,
+  .dashboard-container,
+  .challenge-image-container {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Breakpoint for 1200px */
+@media screen and (max-width: 1200px) {
+  .form-section,
+  .brain-section,
+  .features,
+  .statistics,
+  .banner-info,
+  .ambulatorial,
+  .efficiency,
+  .site-footer,
+  .container,
+  .content-left,
+  .content-right,
+  .info-container,
+  .stats-grid,
+  .text-content {
+    width: 100%;;
+    max-width: 100%;;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* Breakpoint for 960px */
+@media screen and (max-width: 960px) {
+  .form-section,
+  .brain-section,
+  .features,
+  .statistics,
+  .banner-info,
+  .ambulatorial,
+  .efficiency,
+  .site-footer,
+  .container,
+  .content-left,
+  .content-right,
+  .info-container,
+  .stats-grid,
+  .text-content {
+    width: 100%;;
+    max-width: 100%;;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Breakpoint for 768px */
+@media screen and (max-width: 768px) {
+  .form-section,
+  .brain-section,
+  .features,
+  .statistics,
+  .banner-info,
+  .ambulatorial,
+  .efficiency,
+  .site-footer,
+  .container,
+  .content-left,
+  .content-right,
+  .info-container,
+  .stats-grid,
+  .text-content {
+    width: 100%;;
+    max-width: 100%;;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .flex-container,
+  .grid-container {
+    flex-direction: column;
+  }
+}
+
+/* Breakpoint for 480px */
+@media screen and (max-width: 480px) {
+  .form-section,
+  .brain-section,
+  .features,
+  .statistics,
+  .banner-info,
+  .ambulatorial,
+  .efficiency,
+  .site-footer,
+  .container,
+  .content-left,
+  .content-right,
+  .info-container,
+  .stats-grid,
+  .text-content,
+  .box-logo,
+  .laptop-image,
+  .dashboard-container,
+  .challenge-image-container,
+  .brain-image-container,
+  .content {
+    width: 100%; !important;
+    max-width: 100%; !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+
+  * {
+    max-width: 100%;;
+    overflow-x: hidden;
+  }
+}
+
+/* Breakpoint for 360px and below */
+@media screen and (max-width: 360px) {
+  .form-section,
+  .brain-section,
+  .features,
+  .statistics,
+  .banner-info,
+  .ambulatorial,
+  .efficiency,
+  .site-footer,
+  .container,
+  .content-left,
+  .content-right,
+  .info-container,
+  .stats-grid,
+  .text-content,
+  .box-logo,
+  .laptop-image,
+  .dashboard-container,
+  .challenge-image-container,
+  .brain-image-container,
+  .content {
+    width: 100%; !important;
+    max-width: 100%; !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+
+  * {
+    max-width: 100%;;
+    overflow-x: hidden;
+  }
+}
+
+/* Breakpoint for 360px and below */
+@media screen and (max-width: 360px) {
+  .form-section,
+  .brain-section,
+  .features,
+  .statistics,
+  .banner-info,
+  .ambulatorial,
+  .efficiency,
+  .site-footer,
+  .container,
+  .content-left,
+  .content-right,
+  .info-container,
+  .stats-grid,
+  .text-content {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Breakpoint for 1350px to 956px */
+@media screen and (max-width: 1350px) and (min-width: 956px) {
+  .form-section,
+  .brain-section,
+  .features,
+  .statistics,
+  .banner-info,
+  .ambulatorial,
+  .efficiency,
+  .site-footer,
+  .container,
+  .content-left,
+  .content-right,
+  .info-container,
+  .stats-grid,
+  .text-content,
+  .box-logo,
+  .laptop-image,
+  .dashboard-container,
+  .challenge-image-container,
+  .brain-image-container,
+  .content {
+    width: 100%; !important;
+    max-width: 100%; !important;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+
+  .features .container,
+  .statistics .container,
+  .banner-info .container,
+  .ambulatorial .container,
+  .efficiency .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  * {
+    max-width: 100%;;
+    overflow-x: hidden;
+  }
+
+  .laptop-image,
+  .dashboard-container,
+  .challenge-image-container {
+    width: 100%;
+    height: auto;
+  }
 }
