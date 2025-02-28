@@ -9,11 +9,35 @@
     --padding-x: 150px;
 }
 
+/* Webkit browsers (Chrome, Safari, newer versions of Edge) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.8) rgba(255, 255, 255, 0.1);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    max-width: 100%;;
+    max-width: 100%;
 }
 
 body {
@@ -22,8 +46,8 @@ body {
     color: var(--white);
     line-height: 1.6;
     overflow-x: hidden;
-    width: 100%;;
-    max-width: 100%;;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* Atualização global de todas as fontes */
@@ -150,7 +174,7 @@ header {
 /* Ajustes nos textos */
 .text-content h2 {
     color: #0F103C;
-    font-family: Ubuntu;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 42px; /* Aumentado de 36px para 42px */
     font-style: normal;
     font-weight: 500;
@@ -163,7 +187,7 @@ header {
 
 .text-content p {
     color: #0F103C;
-    font-family: Ubuntu;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 26px; /* Aumentado de 24px para 26px */
     font-style: normal;
     font-weight: 400;
@@ -174,7 +198,7 @@ header {
 } 
 .telemetria-orizon {
     color: #0F103C;
-    font-family: Ubuntu;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 24px;
     font-style: italic;
     font-weight: 400;
@@ -305,14 +329,41 @@ header {
 
 
 .content-left {
-    color: #0F103C;
-    font-family: Ubuntu;
-    font-size: 36px;
+    Color:black;
+    font-family: 'Ubuntu', sans-serif;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    width: 100vw;
+    max-width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+    margin: 0;
 }
 
+@media screen and (max-width: 1440px) {
+    .content-left {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content-left {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content-left {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
 
 .content-right {
     flex: 1;
@@ -391,7 +442,7 @@ header {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: start; /* Changed from center to start */
     gap: 100px;
     width: 100%;
 }
@@ -904,7 +955,7 @@ footer img {
 @media screen and (min-width: 1441px) and (max-width: 1920px) {
     .banner-info .container {
         max-width: 1720px;
-        padding: 0 calc(150px + (200 - 150) * ((100%; - 1440px) / (1920 - 1440)));
+        padding: 0 calc(150px + (200 - 150) * ((100vw - 1440px) / (1920 - 1440)));
     }
 
     .banner-info .left-column,
@@ -1191,7 +1242,7 @@ footer img {
 @media screen and (min-width: 1441px) and (max-width: 1920px) {
     .banner-info .container {
         max-width: 1920px;
-        padding: 0 calc(150px + (200 - 150) * ((100%; - 1440px) / (1920 - 1440)));
+        padding: 0 calc(150px + (200 - 150) * ((100vw - 1440px) / (1920 - 1440)));
     }
 }
 
@@ -2101,7 +2152,7 @@ img {
 @media screen and (min-width: 1441px) and (max-width: 1920px) {
     .text-content {
         max-width: 1000px; /* Ainda maior para telas maiores */
-        padding-left: calc(250px + (300 - 250) * ((100%; - 1440px) / (1920 - 1440)));
+        padding-left: calc(250px + (300 - 250) * ((100% - 1440px) / (1920 - 1440)));
     }
 
     .text-content h2 {
@@ -2209,8 +2260,8 @@ img {
   .info-container,
   .stats-grid,
   .text-content {
-    width: 100%;;
-    max-width: 100%;;
+    width: 100%;
+    max-width: 100%;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -2239,8 +2290,8 @@ img {
   .info-container,
   .stats-grid,
   .text-content {
-    width: 100%;;
-    max-width: 100%;;
+    width: 100%;
+    max-width: 100%;
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -2262,8 +2313,8 @@ img {
   .info-container,
   .stats-grid,
   .text-content {
-    width: 100%;;
-    max-width: 100%;;
+    width: 100%;
+    max-width: 100%;
     padding-left: 25px;
     padding-right: 25px;
   }
@@ -2289,8 +2340,8 @@ img {
   .info-container,
   .stats-grid,
   .text-content {
-    width: 100%;;
-    max-width: 100%;;
+    width: 100%;
+    max-width: 100%;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -2323,8 +2374,8 @@ img {
   .challenge-image-container,
   .brain-image-container,
   .content {
-    width: 100%; !important;
-    max-width: 100%; !important;
+    width: 100%;
+    max-width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: 0;
@@ -2333,7 +2384,7 @@ img {
   }
 
   * {
-    max-width: 100%;;
+    max-width: 100%;
     overflow-x: hidden;
   }
 }
@@ -2360,8 +2411,8 @@ img {
   .challenge-image-container,
   .brain-image-container,
   .content {
-    width: 100%; !important;
-    max-width: 100%; !important;
+    width: 100%;
+    max-width: 100%;
     padding-left: 10px;
     padding-right: 10px;
     margin-left: 0;
@@ -2370,7 +2421,7 @@ img {
   }
 
   * {
-    max-width: 100%;;
+    max-width: 100%;
     overflow-x: hidden;
   }
 }
@@ -2420,8 +2471,8 @@ img {
   .challenge-image-container,
   .brain-image-container,
   .content {
-    width: 100%; !important;
-    max-width: 100%; !important;
+    width: 100%;
+    max-width: 100%;
     padding-left: 30px;
     padding-right: 30px;
     margin-left: 0;
@@ -2439,7 +2490,7 @@ img {
   }
 
   * {
-    max-width: 100%;;
+    max-width: 100%;
     overflow-x: hidden;
   }
 
@@ -2449,4 +2500,125 @@ img {
     width: 100%;
     height: auto;
   }
+}
+
+.img-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-content .laptop-image {
+    max-width: 100%;
+    height: auto;
+    transform: scale(1.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.content-right2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-right2 .laptop-image {
+    max-width: 100%;
+    height: auto;
+    transform: scale(1.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.content-descubra {
+    width: 100%;
+    height: auto; /* Changed from 100% to auto */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-right: 0; /* Added to ensure no right padding */
+}
+
+.content-descubra h2,
+.content-descubra p,
+.content-descubra ul,
+.content-descubra li {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.content-descubra h2 {
+    width: 100%;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--dark-blue);
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.content-descubra p {
+    width: 100%;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.content-descubra ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.content-descubra li {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: var(--primary-blue);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .features .container {
+        gap: 10px;
+    }
+    
+    .content-descubra {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .features .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-descubra {
+        width: 100%;
+        margin-bottom: 40px;
+        margim-right: -20px;
+        margin-left: -20px;
+    }
+}
+
+/* Hide decorative elements on small screens */
+@media screen and (max-width: 720px) {
+    .elipse_clara,
+    .elipse-escuro2,
+    .elipse-right,
+    .elipse-left,
+    [class*="elipse"] {
+        display: none !important;
+    }
 }
